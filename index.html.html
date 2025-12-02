@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Two Button Site</title>
+
+  <style>
+    /* CSS is here */
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    button {
+      padding: 12px 20px;
+      margin: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #0078ff;
+      color: white;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #005fcc;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>My Simple Two-Button Site</h1>
+    <button id="btn1">Button One</button>
+    <button id="btn2">Button Two</button>
+  </div>
+
+  <script>
+    // JavaScript is here
+    document.getElementById("btn1").onclick = () => {
+      alert("Button One clicked!");
+    };
+
+    document.getElementById("btn2").onclick = () => {
+      alert("Button Two clicked!");
+    };
+  </script>
+</body>
+</html>
