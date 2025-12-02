@@ -1,64 +1,54 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Two Button Site</title>
+    <meta charset="UTF-8">
+    <title>Random Wiki</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
-  <style>
-    /* CSS is here */
-    body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .container {
-      text-align: center;
-      background: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    button {
-      padding: 12px 20px;
-      margin: 10px;
-      font-size: 18px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      background: #0078ff;
-      color: white;
-      transition: 0.2s;
-    }
-
-    button:hover {
-      background: #005fcc;
-    }
-  </style>
+    <style>
+        body {
+            font-family: "Great Vibes", cursive;
+            font-size: 40px;
+            color: #ff69b4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffc5d3;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+    </style>
 </head>
-
 <body>
-  <div class="container">
-    <h1>My Simple Two-Button Site</h1>
-    <button id="btn1">Button One</button>
-    <button id="btn2">Button Two</button>
-  </div>
 
-  <script>
-    // JavaScript is here
-    document.getElementById("btn1").onclick = () => {
-      alert("Button One clicked!");
-    };
+    <h1>Trykk på denne knappen :)</h1>
 
-    document.getElementById("btn2").onclick = () => {
-      alert("Button Two clicked!");
-    };
-  </script>
+    <button onclick="randomPage()">Randomiser</button>
+
+    <script>
+        function randomPage() {
+            // Lag en liste med mulige sider
+            const pages = [
+                "https://no.wikipedia.org/wiki/Norge",
+                "https://no.wikipedia.org/wiki/Jan_Mayen"
+            ];
+
+            // Velg tilfeldig indeks: 0 eller 1
+            const randomIndex = Math.floor(Math.random() * pages.length);
+
+            // Gå til siden
+            window.location.href = pages[randomIndex];
+        }
+    </script>
+
 </body>
 </html>
